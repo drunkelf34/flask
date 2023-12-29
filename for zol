@@ -1,0 +1,34 @@
+expenses = {}
+
+def add_expenses():
+    expense = input("Enter the expense: ") 
+    amount = float(input("enter the amount"))
+    expenses[expense] = amount
+
+def remove_expense():
+    expense = input("Enter the expense to remove:")
+    if expense in expenses:
+        del expenses[expense]
+    else:
+        print("Expense not found")   
+
+def get_expense_amount():
+    expense = input("Enter the expense to get amount:")        
+    if(expense in expenses):
+     print(expenses[expense])
+     return expenses[expense]
+    else:
+        print("expense not found") 
+        return None
+def update_expense_amount():
+    expense = input("Enetr expense to get amount:")   
+    if expense in expenses:
+        amount = float(input("enter the amount")) 
+        expenses[expense] = amount
+    else:
+        print("expense not found") 
+add_expenses()
+remove_expense()
+get_expense_amount()
+update_expense_amount()          
+print(expenses) 
